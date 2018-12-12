@@ -11,9 +11,9 @@
             <Label Content="Login" Foreground="White" FontSize="25" HorizontalAlignment="Center"/>
             <Separator></Separator>
             <Label Content="Username" Foreground="White"/>
-            <TextBox Name="txUsername" Background="#545d6a" Foreground="White" FontSize="18"/>
+            <TextBox Name="txtUsername" Background="#545d6a" Foreground="White" FontSize="18"/>
             <Label Content="Password" Foreground="White"/>
-            <TextBox Name="txPasword" Background="#545d6a" Foreground="White" FontSize="18"/>
+            <TextBox Name="txtPassword" Background="#545d6a" Foreground="White" FontSize="18"/>
             <Button Name="btnSubmit" Click="btnSubmit_Click"  Content="Submit" Margin="120 10" Background="#545d6a" Foreground="White" FontSize="18"/>
         </StackPanel>
     </Border>
