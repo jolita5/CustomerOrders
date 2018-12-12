@@ -27,7 +27,7 @@ namespace CustomerOrders
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-            SqlConnection sqlCon = new SqlConnection(@"Data Source=localdb\MSSQLLocalDB; Initial Catalog=LoginUserDB; Integrated Security=True;");
+            SqlConnection sqlCon = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB; Initial Catalog=LoginUserDB; Integrated Security=True;");
 
             try
             {
