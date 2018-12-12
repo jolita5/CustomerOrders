@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CustomerOrders"
         mc:Ignorable="d"
-         Title="LoginWindow" Height="400" Width="450" FontSize="14" Background="#04a788">
+         Title="LoginWindow" Height="400" Width="450" FontSize="14" Background="#77a456">
     <Border Background="#2e3137" CornerRadius="20" Margin="20">
         <StackPanel>
             <Label Content="Login" Foreground="White" FontSize="25" HorizontalAlignment="Center"/>
