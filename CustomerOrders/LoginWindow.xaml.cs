@@ -43,9 +43,16 @@ namespace CustomerOrders
 
                     if(count == 1)
                     {
-                        MainWindow dashboard = new MainWindow();
-                        dashboard.Show();
-                        this.Close();
+                        if(txtPassword.Text.Length >= 6)
+                        {
+                            MainWindow dashboard = new MainWindow();
+                            dashboard.Show();
+                            this.Close();
+                        }
+                       else
+                        {
+                            MessageBox.Show("Password must consists of 6 or more digits!");
+                        }
                     }
                     else
                     {
