@@ -88,7 +88,13 @@ namespace CustomerOrders
 		
 		private string _City;
 		
-		private System.Nullable<System.DateTime> _Date;
+		private System.Nullable<System.DateTime> _User_From_Date;
+		
+		private string _Surname;
+		
+		private string _Aftername;
+		
+		private System.Nullable<int> _Age;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -102,8 +108,14 @@ namespace CustomerOrders
     partial void OnPasswordChanged();
     partial void OnCityChanging(string value);
     partial void OnCityChanged();
-    partial void OnDateChanging(System.Nullable<System.DateTime> value);
-    partial void OnDateChanged();
+    partial void OnUser_From_DateChanging(System.Nullable<System.DateTime> value);
+    partial void OnUser_From_DateChanged();
+    partial void OnSurnameChanging(string value);
+    partial void OnSurnameChanged();
+    partial void OnAfternameChanging(string value);
+    partial void OnAfternameChanged();
+    partial void OnAgeChanging(System.Nullable<int> value);
+    partial void OnAgeChanged();
     #endregion
 		
 		public LoginData()
@@ -191,22 +203,82 @@ namespace CustomerOrders
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Date", DbType="DateTime")]
-		public System.Nullable<System.DateTime> Date
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_User_From_Date", DbType="DateTime")]
+		public System.Nullable<System.DateTime> User_From_Date
 		{
 			get
 			{
-				return this._Date;
+				return this._User_From_Date;
 			}
 			set
 			{
-				if ((this._Date != value))
+				if ((this._User_From_Date != value))
 				{
-					this.OnDateChanging(value);
+					this.OnUser_From_DateChanging(value);
 					this.SendPropertyChanging();
-					this._Date = value;
-					this.SendPropertyChanged("Date");
-					this.OnDateChanged();
+					this._User_From_Date = value;
+					this.SendPropertyChanged("User_From_Date");
+					this.OnUser_From_DateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Surname", DbType="VarChar(50)")]
+		public string Surname
+		{
+			get
+			{
+				return this._Surname;
+			}
+			set
+			{
+				if ((this._Surname != value))
+				{
+					this.OnSurnameChanging(value);
+					this.SendPropertyChanging();
+					this._Surname = value;
+					this.SendPropertyChanged("Surname");
+					this.OnSurnameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Aftername", DbType="VarChar(50)")]
+		public string Aftername
+		{
+			get
+			{
+				return this._Aftername;
+			}
+			set
+			{
+				if ((this._Aftername != value))
+				{
+					this.OnAfternameChanging(value);
+					this.SendPropertyChanging();
+					this._Aftername = value;
+					this.SendPropertyChanged("Aftername");
+					this.OnAfternameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Age", DbType="Int")]
+		public System.Nullable<int> Age
+		{
+			get
+			{
+				return this._Age;
+			}
+			set
+			{
+				if ((this._Age != value))
+				{
+					this.OnAgeChanging(value);
+					this.SendPropertyChanging();
+					this._Age = value;
+					this.SendPropertyChanged("Age");
+					this.OnAgeChanged();
 				}
 			}
 		}
