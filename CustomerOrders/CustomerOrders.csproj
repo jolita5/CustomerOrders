@@ -56,6 +56,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="TableFromSQL.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TableFromSQL.dbml</DependentUpon>
+    </Compile>
     <Compile Include="UsersLoginData.xaml.cs">
       <DependentUpon>UsersLoginData.xaml</DependentUpon>
     </Compile>
@@ -70,11 +75,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ConnectionToSQLUserLogin.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ConnectionToSQLUserLogin.dbml</DependentUpon>
     </Compile>
     <Compile Include="LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
@@ -106,17 +106,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="ConnectionToSQLUserLogin.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>ConnectionToSQLUserLogin.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ConnectionToSQLUserLogin.dbml.layout">
-      <DependentUpon>ConnectionToSQLUserLogin.dbml</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TableFromSQL.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>TableFromSQL.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TableFromSQL.dbml.layout">
+      <DependentUpon>TableFromSQL.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

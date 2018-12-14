@@ -19,7 +19,7 @@ namespace CustomerOrders
     /// </summary>
     public partial class UsersLoginData : Window
     {
-        ConnectionToSQLUserLoginDataContext dc = new ConnectionToSQLUserLoginDataContext(Properties.Settings.Default.LoginUserDBConnectionString);
+        TableFromSQLDataContext dc = new TableFromSQLDataContext(Properties.Settings.Default.LoginUserDBConnectionString);
 
         public UsersLoginData()
         {
@@ -27,7 +27,7 @@ namespace CustomerOrders
 
             if(dc.DatabaseExists())
             {
-                UsersList.ItemsSource = dc.tbUserLists;
+                UsersList.ItemsSource = dc.LoginDatas;
             }
         }
 
