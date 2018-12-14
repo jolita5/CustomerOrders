@@ -41,11 +41,11 @@ namespace CustomerOrders
                     sqlComd.Parameters.AddWithValue("@Password", txtPassword.Text);
                     int count = Convert.ToInt32(sqlComd.ExecuteScalar());
 
-                    if(count == 1)
-                    {                    
-                            MainWindow dashboard = new MainWindow();
-                            dashboard.Show();
-                            this.Close();
+                    if (count >= 1)
+                    {
+                        UsersLoginData dashboard = new UsersLoginData();
+                        dashboard.Show();
+                        this.Close();
                     }
                     else
                     {

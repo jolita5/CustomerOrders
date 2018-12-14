@@ -19,21 +19,13 @@ namespace CustomerOrders
     /// </summary>
     public partial class UsersLoginData : Window
     {
-        TableFromSQLDataContext dc = new TableFromSQLDataContext(Properties.Settings.Default.LoginUserDBConnectionString);
 
         public UsersLoginData()
         {
             InitializeComponent();
 
-            if(dc.DatabaseExists())
-            {
-                UsersList.ItemsSource = dc.LoginDatas;
-            }
+           
         }
 
-        private void SaveButton_Click(object sender, RoutedEventArgs e)
-        {
-            dc.SubmitChanges();
-        }
     }
 }
