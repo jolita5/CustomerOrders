@@ -30,9 +30,9 @@ namespace CustomerOrders
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertLoginData(LoginData instance);
-    partial void UpdateLoginData(LoginData instance);
-    partial void DeleteLoginData(LoginData instance);
+    partial void InsertProduct(Product instance);
+    partial void UpdateProduct(Product instance);
+    partial void DeleteProduct(Product instance);
     #endregion
 		
 		public TableFromSQLDataContext() : 
@@ -65,36 +65,26 @@ namespace CustomerOrders
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<LoginData> LoginDatas
+		public System.Data.Linq.Table<Product> Products
 		{
 			get
 			{
-				return this.GetTable<LoginData>();
+				return this.GetTable<Product>();
 			}
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.LoginData")]
-	public partial class LoginData : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Products")]
+	public partial class Product : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
 		private int _Id;
 		
-		private string _UserName;
+		private string _ProductName;
 		
-		private string _Password;
-		
-		private string _City;
-		
-		private System.Nullable<System.DateTime> _User_From_Date;
-		
-		private string _Surname;
-		
-		private string _Aftername;
-		
-		private System.Nullable<int> _Age;
+		private System.Nullable<double> _Price;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -102,23 +92,13 @@ namespace CustomerOrders
     partial void OnCreated();
     partial void OnIdChanging(int value);
     partial void OnIdChanged();
-    partial void OnUserNameChanging(string value);
-    partial void OnUserNameChanged();
-    partial void OnPasswordChanging(string value);
-    partial void OnPasswordChanged();
-    partial void OnCityChanging(string value);
-    partial void OnCityChanged();
-    partial void OnUser_From_DateChanging(System.Nullable<System.DateTime> value);
-    partial void OnUser_From_DateChanged();
-    partial void OnSurnameChanging(string value);
-    partial void OnSurnameChanged();
-    partial void OnAfternameChanging(string value);
-    partial void OnAfternameChanged();
-    partial void OnAgeChanging(System.Nullable<int> value);
-    partial void OnAgeChanged();
+    partial void OnProductNameChanging(string value);
+    partial void OnProductNameChanged();
+    partial void OnPriceChanging(System.Nullable<double> value);
+    partial void OnPriceChanged();
     #endregion
 		
-		public LoginData()
+		public Product()
 		{
 			OnCreated();
 		}
@@ -143,142 +123,42 @@ namespace CustomerOrders
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="VarChar(10)")]
-		public string UserName
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductName", DbType="VarChar(50)")]
+		public string ProductName
 		{
 			get
 			{
-				return this._UserName;
+				return this._ProductName;
 			}
 			set
 			{
-				if ((this._UserName != value))
+				if ((this._ProductName != value))
 				{
-					this.OnUserNameChanging(value);
+					this.OnProductNameChanging(value);
 					this.SendPropertyChanging();
-					this._UserName = value;
-					this.SendPropertyChanged("UserName");
-					this.OnUserNameChanged();
+					this._ProductName = value;
+					this.SendPropertyChanged("ProductName");
+					this.OnProductNameChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="VarChar(10)")]
-		public string Password
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Price", DbType="Float")]
+		public System.Nullable<double> Price
 		{
 			get
 			{
-				return this._Password;
+				return this._Price;
 			}
 			set
 			{
-				if ((this._Password != value))
+				if ((this._Price != value))
 				{
-					this.OnPasswordChanging(value);
+					this.OnPriceChanging(value);
 					this.SendPropertyChanging();
-					this._Password = value;
-					this.SendPropertyChanged("Password");
-					this.OnPasswordChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_City", DbType="VarChar(50)")]
-		public string City
-		{
-			get
-			{
-				return this._City;
-			}
-			set
-			{
-				if ((this._City != value))
-				{
-					this.OnCityChanging(value);
-					this.SendPropertyChanging();
-					this._City = value;
-					this.SendPropertyChanged("City");
-					this.OnCityChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_User_From_Date", DbType="DateTime")]
-		public System.Nullable<System.DateTime> User_From_Date
-		{
-			get
-			{
-				return this._User_From_Date;
-			}
-			set
-			{
-				if ((this._User_From_Date != value))
-				{
-					this.OnUser_From_DateChanging(value);
-					this.SendPropertyChanging();
-					this._User_From_Date = value;
-					this.SendPropertyChanged("User_From_Date");
-					this.OnUser_From_DateChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Surname", DbType="VarChar(50)")]
-		public string Surname
-		{
-			get
-			{
-				return this._Surname;
-			}
-			set
-			{
-				if ((this._Surname != value))
-				{
-					this.OnSurnameChanging(value);
-					this.SendPropertyChanging();
-					this._Surname = value;
-					this.SendPropertyChanged("Surname");
-					this.OnSurnameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Aftername", DbType="VarChar(50)")]
-		public string Aftername
-		{
-			get
-			{
-				return this._Aftername;
-			}
-			set
-			{
-				if ((this._Aftername != value))
-				{
-					this.OnAfternameChanging(value);
-					this.SendPropertyChanging();
-					this._Aftername = value;
-					this.SendPropertyChanged("Aftername");
-					this.OnAfternameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Age", DbType="Int")]
-		public System.Nullable<int> Age
-		{
-			get
-			{
-				return this._Age;
-			}
-			set
-			{
-				if ((this._Age != value))
-				{
-					this.OnAgeChanging(value);
-					this.SendPropertyChanging();
-					this._Age = value;
-					this.SendPropertyChanged("Age");
-					this.OnAgeChanged();
+					this._Price = value;
+					this.SendPropertyChanged("Price");
+					this.OnPriceChanged();
 				}
 			}
 		}

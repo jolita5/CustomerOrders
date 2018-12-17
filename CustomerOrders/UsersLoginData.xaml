@@ -8,6 +8,8 @@
         Title="UsersLoginData" Height="450" Width="800">
     
     <Grid>
-        <Label Content="Dashboard"/>
+        <DataGrid Name="UsersList" Margin="0,0,0,45" ></DataGrid>
+        <Button Name="SaveButton" Click="SaveButton_Click" Content="Save" Margin="300, 300, 300, 60"></Button>
+
     </Grid>
 </Window>

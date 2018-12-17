@@ -38,7 +38,7 @@ namespace CustomerOrders
                     SqlCommand sqlComd = new SqlCommand(query, sqlCon);
                     sqlComd.CommandType = System.Data.CommandType.Text;
                     sqlComd.Parameters.AddWithValue("@UserName", txtUsername.Text);
-                    sqlComd.Parameters.AddWithValue("@Password", txtPassword.Text);
+                    sqlComd.Parameters.AddWithValue("@Password", txtPassword.Password);
                     int count = Convert.ToInt32(sqlComd.ExecuteScalar());
 
                     if (count >= 1)
