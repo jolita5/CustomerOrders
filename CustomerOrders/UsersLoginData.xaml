@@ -6,9 +6,12 @@
         xmlns:local="clr-namespace:CustomerOrders"
         mc:Ignorable="d"
         Title="UsersLoginData" Height="450" Width="800">
-    
+    <Window.Background>
+        <ImageBrush ImageSource="Image/Sports.jpg"/>
+    </Window.Background>
     <Grid>
-        <DataGrid Name="UsersList" Margin="0,0,0,45" ></DataGrid>
+       
+        <DataGrid Name="UsersList" Margin="45,45,45,45" ></DataGrid>
         <Button Name="SaveButton" Click="SaveButton_Click" Content="Save" Margin="300, 300, 300, 60"></Button>
 
     </Grid>

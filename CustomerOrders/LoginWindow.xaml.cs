@@ -23,6 +23,8 @@ namespace CustomerOrders
         public LoginWindow()
         {
             InitializeComponent();
+            txtPassword.PasswordChar = '*';
+            txtUsername.MaxLength = 6;
         }
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
