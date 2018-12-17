@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,22 +21,32 @@ namespace CustomerOrders
     /// </summary>
     public partial class UsersLoginData : Window
     {
+
         TableFromSQLDataContext dc = new TableFromSQLDataContext(Properties.Settings.Default.LoginUserDBConnectionString);
+            
 
         public UsersLoginData()
         {
-            InitializeComponent();
 
+            InitializeComponent();
+           
+          
             if (dc.DatabaseExists())
             {
+
                 UsersList.ItemsSource = dc.Products;
+
             }
         }
 
+
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
+
             dc.SubmitChanges();
         }
+
+
 
     }
 }
