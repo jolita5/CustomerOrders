@@ -28,6 +28,39 @@ namespace CustomerOrders
 
         }
 
-       
+
+        private void ApplyButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show($"You note is: {this.Your_notesText.Text}");
+
+        }
+
+        private void ResetButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.TennisCheckbox.IsChecked = this.BasketballCheckbox.IsChecked = this.VolleyballCheckbox.IsChecked = this.YogaCheckbox.IsChecked = this.FitnessCheckbox.IsChecked = false;
+        }
+
+        private void Checkbox_Checked(object sender, RoutedEventArgs e)
+        {
+            this.Your_ChoiceText.Text += " " + (string)((CheckBox)sender).Content;
+        }
+
+        private void PaymentDropdown_SelectionChange(object sender, SelectionChangedEventArgs e)
+        {
+            if (this.NoteText == null)
+                return;
+
+            var combo = (ComboBox)sender;
+            var value = (ComboBoxItem)combo.SelectedValue;
+            this.NoteText.Text = (string)value.Content;
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            PaymentDropdown_SelectionChange(this.PaymentDropdown, null);
+
+        }
+
+      
     }
 }
