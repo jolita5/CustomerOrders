@@ -46,7 +46,11 @@ namespace CustomerOrders
             dc.SubmitChanges();
         }
 
-
-
+        private void MakeOrderButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow orderTabel = new MainWindow();
+            orderTabel.Show();
+            this.Close();
+        }
     }
 }

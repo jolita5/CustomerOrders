@@ -58,6 +58,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="EndWindow.xaml.cs">
+      <DependentUpon>EndWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TableFromSQL.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -66,6 +69,10 @@
     <Compile Include="UsersLoginData.xaml.cs">
       <DependentUpon>UsersLoginData.xaml</DependentUpon>
     </Compile>
+    <Page Include="EndWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="LoginWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -131,7 +138,7 @@
     <Resource Include="Image\Sports.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image\141747-sports-wallpaper-1920x1080-for-4k.jpg" />
+    <Resource Include="Image\images.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

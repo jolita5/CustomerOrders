@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Products" Height="400" Width="350">
     <Window.Background>
-        <ImageBrush ImageSource="Image/141747-sports-wallpaper-1920x1080-for-4k.jpg"/>
+        <ImageBrush ImageSource="Image/images.jpg"/>
     </Window.Background>
     <Border Padding="10">
        
@@ -23,7 +23,7 @@
 
                 <Button x:Name ="ApplyButton" Click="ApplyButton_Click" Margin="0 0 10 0" Grid.Column="0" Content ="Apply"/>
                 <Button x:Name ="ResetButton" Click ="ResetButton_Click" Grid.Column="1" Content ="Reset" Height="20" VerticalAlignment="Top"/>
-                <Button Margin="10 0 0 0 " Grid.Column="2" Content ="Refresh"/>
+                <Button x:Name ="RefreshButton" Click="Refresh_Click" Margin="10 0 0 0 " Grid.Column="2" Content ="Refresh" />
             </Grid>
 
             <TextBlock Text ="Products" FontWeight="Bold" Margin="0 10"/>

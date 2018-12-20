@@ -12,7 +12,9 @@
     <Grid>
        
         <DataGrid Name="UsersList" Margin="45,45,45,45" ></DataGrid>
-        <Button Name="SaveButton" Click="SaveButton_Click" Content="Save" Margin="300, 300, 300, 60"></Button>
+        <Button Name="SaveButton" Click="SaveButton_Click" Content="Save" Margin="500, 300, 200, 60"></Button>
+        <Button Name="MakeOrderButton" Click="MakeOrderButton_Click" Content="Make order" Margin="200, 300, 500, 60"></Button>
+
 
     </Grid>
 </Window>
