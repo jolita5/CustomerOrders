@@ -67,6 +67,7 @@
 
             <TextBlock Text="Time" />
             <ComboBox SelectedIndex="0" Padding="2">
+                <ComboBoxItem></ComboBoxItem>
                 <ComboBoxItem>Monday</ComboBoxItem>
                 <ComboBoxItem>Tuesday</ComboBoxItem>
                 <ComboBoxItem>Wensday</ComboBoxItem>
@@ -76,17 +77,15 @@
             </ComboBox>
 
             <TextBlock Text="Payment" />
-            <ComboBox SelectionChanged="PaymentDropdown_SelectionChange" x:Name="PaymentDropdown"  SelectedIndex="0" Padding="2">
+            <ComboBox SelectedIndex="0" Padding="2">
+                <ComboBoxItem></ComboBoxItem>
                 <ComboBoxItem>By Card/Cash after service</ComboBoxItem>
                 <ComboBoxItem>By e-banking, now</ComboBoxItem>
             </ComboBox>
 
-            <TextBlock Text ="Your_notes"/>
-            <TextBox x:Name ="Your_notesText" Padding ="2"/>
+            <TextBlock Text ="Note"/>
+            <TextBox x:Name ="NoteText" Padding ="2"/>
 
-            <TextBlock Text="Payments_Info" />
-            <TextBox x:Name ="NoteText" Padding ="2" />
-           
         </StackPanel>
     </Border>
   

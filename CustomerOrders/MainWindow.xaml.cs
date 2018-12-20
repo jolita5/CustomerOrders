@@ -20,7 +20,7 @@ namespace CustomerOrders
     /// </summary>
     public partial class MainWindow : Window
     {
-       
+
 
         public MainWindow()
         {
@@ -31,7 +31,7 @@ namespace CustomerOrders
 
         private void ApplyButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show($"You note is: {this.Your_notesText.Text}");
+            MessageBox.Show($"You note is: {this.NoteText.Text}");
 
         }
 
@@ -47,27 +47,28 @@ namespace CustomerOrders
             this.Your_ChoiceText.Text += " " + (string)((CheckBox)sender).Content;
         }
 
-        private void PaymentDropdown_SelectionChange(object sender, SelectionChangedEventArgs e)
-        {
-            if (this.NoteText == null)
-                return;
 
-            var combo = (ComboBox)sender;
-            var value = (ComboBoxItem)combo.SelectedValue;
-            this.NoteText.Text = (string)value.Content;
-        }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            PaymentDropdown_SelectionChange(this.PaymentDropdown, null);
-
-        }
-
-        private void Refresh_Click(object sender, RoutedEventArgs e)
+        private void Save_Click(object sender, RoutedEventArgs e)
         {
             EndWindow end = new EndWindow();
-            end.Show();
-            this.Close();
+
+            if (this.Your_ChoiceText != null) // todo: neveikia
+            {
+                end.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("The order is not full! Please, check your order.");
+            }
+
+
+
+
+
         }
+
+
     }
 }
