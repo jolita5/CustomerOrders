@@ -84,7 +84,9 @@ namespace CustomerOrders
 		
 		private string _ProductName;
 		
-		private System.Nullable<double> _Price;
+		private System.Nullable<double> _Price__1h;
+		
+		private System.Nullable<double> _Price_2h;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -94,8 +96,10 @@ namespace CustomerOrders
     partial void OnIdChanged();
     partial void OnProductNameChanging(string value);
     partial void OnProductNameChanged();
-    partial void OnPriceChanging(System.Nullable<double> value);
-    partial void OnPriceChanged();
+    partial void OnPrice__1hChanging(System.Nullable<double> value);
+    partial void OnPrice__1hChanged();
+    partial void OnPrice_2hChanging(System.Nullable<double> value);
+    partial void OnPrice_2hChanged();
     #endregion
 		
 		public Product()
@@ -143,22 +147,42 @@ namespace CustomerOrders
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Price", DbType="Float")]
-		public System.Nullable<double> Price
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Price_ 1h]", Storage="_Price__1h", DbType="Float")]
+		public System.Nullable<double> Price__1h
 		{
 			get
 			{
-				return this._Price;
+				return this._Price__1h;
 			}
 			set
 			{
-				if ((this._Price != value))
+				if ((this._Price__1h != value))
 				{
-					this.OnPriceChanging(value);
+					this.OnPrice__1hChanging(value);
 					this.SendPropertyChanging();
-					this._Price = value;
-					this.SendPropertyChanged("Price");
-					this.OnPriceChanged();
+					this._Price__1h = value;
+					this.SendPropertyChanged("Price__1h");
+					this.OnPrice__1hChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Price_2h", DbType="Float")]
+		public System.Nullable<double> Price_2h
+		{
+			get
+			{
+				return this._Price_2h;
+			}
+			set
+			{
+				if ((this._Price_2h != value))
+				{
+					this.OnPrice_2hChanging(value);
+					this.SendPropertyChanging();
+					this._Price_2h = value;
+					this.SendPropertyChanged("Price_2h");
+					this.OnPrice_2hChanged();
 				}
 			}
 		}

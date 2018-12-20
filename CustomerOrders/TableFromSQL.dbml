@@ -4,7 +4,8 @@
     <Type Name="Product">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="ProductName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="Price" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="[Price_ 1h]" Member="Price__1h" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Price_2h" Type="System.Double" DbType="Float" CanBeNull="true" />
     </Type>
   </Table>
 </Database>
