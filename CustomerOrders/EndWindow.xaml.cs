@@ -22,6 +22,11 @@ namespace CustomerOrders
         public EndWindow()
         {
             InitializeComponent();
+
+       
         }
+
+
+        
     }
 }

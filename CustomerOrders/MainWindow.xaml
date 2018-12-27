@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CustomerOrders"
         mc:Ignorable="d"
-        Title="Products" Height="400" Width="350">
+        Title="Products" Height="466" Width="360.5">
     <Window.Background>
         <ImageBrush ImageSource="Image/images.jpg"/>
     </Window.Background>
-    <Border Padding="10">
-       
+    <Border Padding="10" Margin="0,0,0,-23">
+
         <StackPanel Margin="0,-10,0,10">
-            
+
             <Grid>
-                
+
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
@@ -50,37 +50,29 @@
                     <CheckBox Checked="Checkbox_Checked" x:Name ="Cost4Checkbox" Content="8,7 Eur/h"/>
                     <CheckBox Checked="Checkbox_Checked" x:Name ="Cost5Checkbox" Content="24,5 Eur/h"/>
                 </StackPanel>
-       
-            
-        <StackPanel Grid.Column="2">
-            <CheckBox Checked="Checkbox_Checked" x:Name ="Cost12Checkbox" Content="20 Eur/2h"/>
-            <CheckBox Checked="Checkbox_Checked" x:Name ="Cost22Checkbox" Content="24 Eur/2h"/>
-            <CheckBox Checked="Checkbox_Checked" x:Name ="Cost32Checkbox" Content="30 Eur/2h"/>
-            <CheckBox Checked="Checkbox_Checked" x:Name ="Cost42Checkbox" Content="19 Eur/2h"/>
-            <CheckBox Checked="Checkbox_Checked" x:Name ="Cost52Checkbox" Content="48 Eur/2h"/>
-        </StackPanel>
 
-        </Grid>
+
+                <StackPanel Grid.Column="2">
+                    <CheckBox Checked="Checkbox_Checked" x:Name ="Cost12Checkbox" Content="20 Eur/2h"/>
+                    <CheckBox Checked="Checkbox_Checked" x:Name ="Cost22Checkbox" Content="24 Eur/2h"/>
+                    <CheckBox Checked="Checkbox_Checked" x:Name ="Cost32Checkbox" Content="30 Eur/2h"/>
+                    <CheckBox Checked="Checkbox_Checked" x:Name ="Cost42Checkbox" Content="19 Eur/2h"/>
+                    <CheckBox Checked="Checkbox_Checked" x:Name ="Cost52Checkbox" Content="48 Eur/2h"/>
+                </StackPanel>
+
+            </Grid>
 
             <TextBlock Text="Your_Choice" />
             <TextBox x:Name="Your_ChoiceText" Padding="2" />
 
-            <TextBlock Text="Time" />
-            <ComboBox SelectedIndex="0" Padding="2">
-                <ComboBoxItem></ComboBoxItem>
-                <ComboBoxItem>Monday</ComboBoxItem>
-                <ComboBoxItem>Tuesday</ComboBoxItem>
-                <ComboBoxItem>Wensday</ComboBoxItem>
-                <ComboBoxItem>Fursday</ComboBoxItem>
-                <ComboBoxItem>Friday</ComboBoxItem>
-                <ComboBoxItem>Saturday</ComboBoxItem>
-            </ComboBox>
+            <Calendar x:Name ="Calendar" Height="163" Margin="12,0,125,0" FirstDayOfWeek="Monday" IsTodayHighlighted="False" SelectedDatesChanged="CalendarText_SelectionChanged" />
+
 
             <TextBlock Text="Payment" />
-            <ComboBox SelectedIndex="0" Padding="2">
-                <ComboBoxItem></ComboBoxItem>
-                <ComboBoxItem>By Card/Cash after service</ComboBoxItem>
-                <ComboBoxItem>By e-banking, now</ComboBoxItem>
+            <ComboBox x:Name ="PaymentText" SelectedIndex="0" Padding="2">
+                <ComboBoxItem/>
+                <ComboBoxItem Content="By_Card/in_Cash, after_service"/>
+                <ComboBoxItem Content="By_e-banking, now"/>
             </ComboBox>
 
             <TextBlock Text ="Note"/>
@@ -88,5 +80,5 @@
 
         </StackPanel>
     </Border>
-  
+
 </Window>

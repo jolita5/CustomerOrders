@@ -31,8 +31,16 @@ namespace CustomerOrders
 
         private void ApplyButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show($"You note is: {this.NoteText.Text}");
+            MessageBox.Show($"Your order is: {this.Your_ChoiceText.Text}, time: {this.Calendar.SelectedDate}, payment: {this.PaymentText.Text}, note: {this.NoteText.Text}");
 
+
+        }
+
+
+
+        private void Checkbox_Checked(object sender, RoutedEventArgs e)
+        {
+            this.Your_ChoiceText.Text += " " + (string)((CheckBox)sender).Content;
         }
 
         private void ResetButton_Click(object sender, RoutedEventArgs e)
@@ -40,20 +48,17 @@ namespace CustomerOrders
             this.TennisCheckbox.IsChecked = this.BasketballCheckbox.IsChecked = this.VolleyballCheckbox.IsChecked = this.YogaCheckbox.IsChecked
                 = this.Cost1Checkbox.IsChecked = this.Cost2Checkbox.IsChecked = this.Cost3Checkbox.IsChecked = this.Cost4Checkbox.IsChecked = this.Cost5Checkbox.IsChecked
                 = this.Cost12Checkbox.IsChecked = this.Cost22Checkbox.IsChecked = this.Cost32Checkbox.IsChecked = this.Cost42Checkbox.IsChecked = this.Cost52Checkbox.IsChecked = false;
-        }
 
-        private void Checkbox_Checked(object sender, RoutedEventArgs e)
-        {
-            this.Your_ChoiceText.Text += " " + (string)((CheckBox)sender).Content;
+            this.Your_ChoiceText.Text = null;
         }
 
 
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            EndWindow end = new EndWindow();
+            EndWindow end = new EndWindow(); // todo: doesn't work
 
-            if (this.Your_ChoiceText != null) // todo: neveikia
+            if (this.Your_ChoiceText.Text != null)
             {
                 end.Show();
                 this.Close();
@@ -64,9 +69,12 @@ namespace CustomerOrders
             }
 
 
+        }
 
-
-
+        private void CalendarText_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Calendar date = new Calendar();
+            date.DisplayDateStart = DateTime.Now;
         }
 
 
