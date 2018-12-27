@@ -61,11 +61,6 @@
     <Compile Include="EndWindow.xaml.cs">
       <DependentUpon>EndWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TableFromSQL.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TableFromSQL.dbml</DependentUpon>
-    </Compile>
     <Compile Include="UsersLoginData.xaml.cs">
       <DependentUpon>UsersLoginData.xaml</DependentUpon>
     </Compile>
@@ -118,14 +113,6 @@
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="TableFromSQL.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>TableFromSQL.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TableFromSQL.dbml.layout">
-      <DependentUpon>TableFromSQL.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

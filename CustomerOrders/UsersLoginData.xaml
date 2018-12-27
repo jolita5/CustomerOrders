@@ -5,15 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CustomerOrders"
         mc:Ignorable="d"
-        Title="UsersLoginData" Height="450" Width="800">
+        Title="UsersLoginData" Height="600" Width="900">
     <Window.Background>
         <ImageBrush ImageSource="Image/Sports.jpg"/>
     </Window.Background>
     <Grid>
        
         <DataGrid Name="UsersList" Margin="45,45,45,45" ></DataGrid>
-        <Button Name="SaveButton" Click="SaveButton_Click" Content="Save" Margin="500, 300, 200, 60"></Button>
-        <Button Name="MakeOrderButton" Click="MakeOrderButton_Click" Content="Make order" Margin="200, 300, 500, 60"></Button>
+        <Button Name="MakeOrderButton" Click="MakeOrderButton_Click" Content="Make order" Margin="200, 450, 500, 60"></Button>
 
 
     </Grid>
