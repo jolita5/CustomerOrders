@@ -10,7 +10,12 @@
         <ImageBrush ImageSource="Image/Sports.jpg"/>
     </Window.Background>
     <Grid>
-        <DataGrid Name="UsersHistory" AutoGenerateColumns="True" HorizontalAlignment="Center" Margin="81,43,80,70" Width="631"/>
+        <DataGrid Name="UsersHistory" AutoGenerateColumns="True" HorizontalAlignment="Center" Margin="164,33,59,73" Width="569"/>
+        <Label Content="Username" Foreground="White"/>
+        <TextBox Name="txtUsername" Background="#545d6a" Foreground="White" FontSize="18" Margin="7,32,647,350"/>
+        <Button x:Name="btnSubmit" Click="btnSubmit_Click"  Content="Submit"  HorizontalAlignment="Left" Height="44" Margin="13,86,0,-72" VerticalAlignment="Top" Width="71"/>
+        <Button x:Name="ExitButton" Click="ExitButton_Click"  Content="Exit" Margin ="539,360,174,21" Background="Orange" Foreground="Blue" FontSize="18" RenderTransformOrigin="0.738,-3.15"/>
+        <Button x:Name="MeniuButton" Click="MeniuButton_Click"  Content="Meniu" Background="Orange" Foreground="Blue" FontSize="18" HorizontalAlignment="Left" Margin="257,362,0,0" VerticalAlignment="Top" Width="89" Height="37"/>
 
     </Grid>
 </Window>
