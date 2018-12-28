@@ -26,43 +26,22 @@ namespace CustomerOrders
             InitializeComponent();
 
             SqlConnection sqlCon = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB; Initial Catalog=LoginUserDB; Integrated Security=True;");
-
+            SqlCommand sqlComd;
+            SqlDataAdapter da;
+            DataTable dt;
             LoginWindow login = new LoginWindow();
-            UsersAccount account = new UsersAccount();
+            DataSet ds = new DataSet();
 
             try
             {
-                if (sqlCon.State == System.Data.ConnectionState.Closed)
-                {
-
+                
                     sqlCon.Open();
-                    String query = "SELECT COUNT(1) FROM LoginData WHERE Username=@UserName AND Password=@Password";
-                    SqlCommand sqlComd = new SqlCommand(query, sqlCon);
-                    sqlComd.CommandType = System.Data.CommandType.Text;
-                    sqlComd.Parameters.AddWithValue("@UserName", login.txtUsername.Text);
-                    sqlComd.Parameters.AddWithValue("@Password", login.txtPassword.Password);
-                    sqlComd.ExecuteNonQuery();
-
-                    SqlDataAdapter dataAdp = new SqlDataAdapter(sqlComd);
-
-
-
-                    int count = Convert.ToInt32(sqlComd.ExecuteScalar());
-
-                    if (count >= 1)
-                    {
-                        DataTable dt = new DataTable("Account");
-                        dataAdp.Fill(dt);
-                        account.UsersInfo.ItemsSource = dt.DefaultView;
-                        dataAdp.Update(dt);
-                        sqlCon.Close();
-                        this.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Username or/and password is incorrect");
-                    }
-                }
+                    sqlComd = new SqlCommand("SELECT * FROM LoginData WHERE Username='"+ login.txtUsername.Text + "' AND Password= '" + login.txtPassword.Password + "'", sqlCon);
+                    da = new SqlDataAdapter(sqlComd);
+                    dt = new DataTable("Account");
+                    da.Fill(dt);
+                    UsersInfo.ItemsSource = dt.DefaultView;
+                    sqlCon.Close();
 
 
             }

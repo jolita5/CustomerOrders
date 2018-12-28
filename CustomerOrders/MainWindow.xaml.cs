@@ -31,7 +31,7 @@ namespace CustomerOrders
 
         private void MakeOrderButton_Click(object sender, RoutedEventArgs e)
         {
-            UsersLoginData orderTabel = new UsersLoginData();
+            MakeOrder orderTabel = new MakeOrder();
             orderTabel.Show();
             this.Close();
         }

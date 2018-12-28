@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CustomerOrders"
         mc:Ignorable="d"
-         Title="UsersLoginData" Height="600" Width="900">
+         Title="MakeOrder" Height="600" Width="900">
     <Window.Background>
         <ImageBrush ImageSource="Image/Sports.jpg"/>
     </Window.Background>

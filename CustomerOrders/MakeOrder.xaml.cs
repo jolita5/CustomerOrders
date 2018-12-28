@@ -19,12 +19,12 @@ namespace CustomerOrders
     /// <summary>
     /// Interaction logic for UsersLoginData.xaml
     /// </summary>
-    public partial class UsersLoginData : Window
+    public partial class MakeOrder : Window
     {
 
 
 
-        public UsersLoginData()
+        public MakeOrder()
         {
             InitializeComponent();
 
@@ -59,9 +59,9 @@ namespace CustomerOrders
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            EndWindow end = new EndWindow(); // todo: doesn't work
+            EndWindow end = new EndWindow();
 
-            if (this.Your_ChoiceText.Text != null)
+            if (Your_ChoiceText.Text != "" && PaymentText.Text !="" && Calendar.SelectedDate != null)
             {
                 end.Show();
                 this.Close();
