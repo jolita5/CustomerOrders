@@ -11,6 +11,16 @@
     </Window.Background>
     <Grid>
         <Label Content="Thank you for your order and have an amazing training!" HorizontalAlignment="Left" Margin="141,54,0,317" VerticalAlignment="Center" Foreground="Blue" Height="48" Width="517" Cursor="None" FontSize="20"/>
-
+        <Button x:Name="MeniuButton" Click="MeniuButton_Click"  Content="Meniu" Margin ="112,116,610,269" Background="Orange" Foreground="Blue" FontSize="18"/>
+        <Button x:Name="ExitButton" Click="ExitButton_Click"  Content="Exit" Margin ="233,114,484,270" Background="Orange" Foreground="Blue" FontSize="18" RenderTransformOrigin="0.738,-3.15">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-13.804"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
     </Grid>
 </Window>
