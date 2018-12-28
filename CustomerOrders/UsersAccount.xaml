@@ -10,15 +10,15 @@
         <ImageBrush ImageSource="Image/Sports.jpg"/>
     </Window.Background>
     <Grid Margin="0,0,677,361" RenderTransformOrigin="4.098,1.931">
-        <DataGrid Name="UsersInfo" AutoGenerateColumns="True" HorizontalAlignment="Center" Margin="191,32,-624,-269" Width="548"/>
+        <DataGrid Name="UsersInfo" AutoGenerateColumns="True" HorizontalAlignment="Center" Margin="176,27,-618,-264" Width="557"/>
         <Label Content="Username" Foreground="White"/>
         <TextBox Name="txtUsername" Background="#545d6a" Foreground="White" FontSize="18" Margin="7,32,-39,-4"/>
-        <Button x:Name="btnSubmit" Click="btnSubmit_Click"  Content="Submit"  HorizontalAlignment="Left" Height="44" Margin="13,86,0,-72" VerticalAlignment="Top" Width="71"/>
+        <Label Content="Password" Foreground="White" Margin="4,78,-4,-78"/>
+        <PasswordBox Name="txtPassword" Background="#545d6a" Foreground="White" FontSize="18" Margin="7,106,-39,-78"/>
+        
+        <Button x:Name="btnSubmit" Click="btnSubmit_Click"  Content="Submit"  HorizontalAlignment="Left" Height="44" Margin="10,157,0,-143" VerticalAlignment="Top" Width="71"/>
 
-        <Button x:Name="ExitButton" Click="ExitButton_Click"  Content="Exit" Margin ="589,355,-582,-345" Background="Orange" Foreground="Blue" FontSize="18" RenderTransformOrigin="0.738,-3.15">
-        </Button>
-        <Button x:Name="MeniuButton" Click="MeniuButton_Click"  Content="Meniu" Background="Orange" Foreground="Blue" FontSize="18" HorizontalAlignment="Left" Margin="298,355,-302,-347" VerticalAlignment="Top" Width="119" Height="50" RenderTransformOrigin="0.5,0.5">
-
-        </Button>
+        <Button x:Name="ExitButton" Click="ExitButton_Click"  Content="Exit" Margin ="589,355,-582,-345" Background="Orange" Foreground="Blue" FontSize="18" RenderTransformOrigin="0.738,-3.15"/>
+        <Button x:Name="MeniuButton" Click="MeniuButton_Click"  Content="Meniu" Background="Orange" Foreground="Blue" FontSize="18" HorizontalAlignment="Left" Margin="298,355,-302,-347" VerticalAlignment="Top" Width="119" Height="50" RenderTransformOrigin="0.5,0.5"/>
     </Grid>
 </Window>

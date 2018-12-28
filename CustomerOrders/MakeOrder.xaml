@@ -66,7 +66,7 @@ Title="Products" Height="466" Width="360.5">
             <TextBlock Text="Your_Choice" />
             <TextBox x:Name="Your_ChoiceText" Padding="2" />
 
-            <Calendar x:Name ="Calendar" Height="163" Margin="12,0,125,0" FirstDayOfWeek="Monday" IsTodayHighlighted="False" SelectedDatesChanged="CalendarText_SelectionChanged" />
+            <Calendar x:Name ="Calendar" Height="163" Margin="12,0,125,0" FirstDayOfWeek="Monday" IsTodayHighlighted="False" />
 
 
             <TextBlock Text="Payment" />

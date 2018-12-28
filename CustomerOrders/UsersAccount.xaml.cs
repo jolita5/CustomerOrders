@@ -24,6 +24,7 @@ namespace CustomerOrders
         public UsersAccount()
         {
             InitializeComponent();
+            txtPassword.PasswordChar = '*';
 
         }
 
@@ -40,15 +41,13 @@ namespace CustomerOrders
             try
             {
 
-
                 sqlCon.Open();
-                sqlComd = new SqlCommand("SELECT * FROM LoginData WHERE Username='" + txtUsername.Text + "'", sqlCon);
+                sqlComd = new SqlCommand("SELECT * FROM LoginData WHERE Username='" + txtUsername.Text + "' AND Password = '" + txtPassword.Password + "'", sqlCon);
                 da = new SqlDataAdapter(sqlComd);
                 dt = new DataTable("Account");
                 da.Fill(dt);
                 UsersInfo.ItemsSource = dt.DefaultView;
                 sqlCon.Close();
-
 
             }
 

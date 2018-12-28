@@ -7,7 +7,7 @@
         mc:Ignorable="d"
          Title="MakeOrder" Height="600" Width="900">
     <Window.Background>
-        <ImageBrush ImageSource="Image/Sports.jpg"/>
+        <ImageBrush ImageSource="Image/images.png"/>
     </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -16,9 +16,9 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Button x:Name ="MakeOrderButton" Click="MakeOrderButton_Click" Margin="0 0 10 0" Height="20" Grid.Column="0" Content ="Make order"/>
-        <Button x:Name ="HistoryButton" Click ="HistoryButton_Click" Grid.Column="1" Content ="History" Height="20" VerticalAlignment="Center"/>
-        <Button x:Name ="Your_AccountButton" Click="Your_AccountButton_Click" Margin="10 0 0 0 " Height="20" Grid.Column="2" Content ="Your Account" />
+        <Button x:Name ="MakeOrderButton" Click="MakeOrderButton_Click" Margin="0 0 10 0" Height="30" Grid.Column="0" Content ="Make order"/>
+        <Button x:Name ="HistoryButton" Click ="HistoryButton_Click" Grid.Column="1" Content ="History" Height="30" VerticalAlignment="Center"/>
+        <Button x:Name ="Your_AccountButton" Click="Your_AccountButton_Click" Margin="10 0 0 0 " Height="30" Grid.Column="2" Content ="Your Account" />
 
 
 

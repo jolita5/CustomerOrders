@@ -76,12 +76,6 @@ namespace CustomerOrders
 
         }
 
-        private void CalendarText_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            Calendar date = new Calendar();
-            date.DisplayDateStart = DateTime.Now;
-        }
-
-
+       
     }
 }
