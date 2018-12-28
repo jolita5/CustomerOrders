@@ -11,9 +11,9 @@
     </Window.Background>
     <Grid>
         <DataGrid Name="UsersHistory" AutoGenerateColumns="True" HorizontalAlignment="Center" Margin="164,33,59,73" Width="569"/>
-        <Label Content="Username" Foreground="White"/>
+        <Label Content="Username" Foreground="White" Margin="25,1,690,386"/>
         <TextBox Name="txtUsername" Background="#545d6a" Foreground="White" FontSize="18" Margin="7,32,647,350"/>
-        <Label Content="Password" Foreground="White" Margin="-1,71,643,268"/>
+        <Label Content="Password" Foreground="White" Margin="29,72,613,267"/>
         <PasswordBox Name="txtPassword" Background="#545d6a" Foreground="White" FontSize="18" Margin="8,96,646,286"/>
         
         <Button x:Name="btnSubmit" Click="btnSubmit_Click"  Content="Submit"  HorizontalAlignment="Left" Height="44" Margin="25,153,0,0" VerticalAlignment="Top" Width="71" RenderTransformOrigin="0.609,2.601"/>

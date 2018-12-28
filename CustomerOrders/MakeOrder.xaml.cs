@@ -51,8 +51,7 @@ namespace CustomerOrders
         private void ResetButton_Click(object sender, RoutedEventArgs e)
         {
             this.TennisCheckbox.IsChecked = this.BasketballCheckbox.IsChecked = this.VolleyballCheckbox.IsChecked = this.YogaCheckbox.IsChecked = this.FitnessCheckbox.IsChecked
-                = this.Cost1Checkbox.IsChecked = this.Cost2Checkbox.IsChecked = this.Cost3Checkbox.IsChecked = this.Cost4Checkbox.IsChecked = this.Cost5Checkbox.IsChecked
-                = this.Cost12Checkbox.IsChecked = this.Cost22Checkbox.IsChecked = this.Cost32Checkbox.IsChecked = this.Cost42Checkbox.IsChecked = this.Cost52Checkbox.IsChecked = false;
+                = this.Tennis2Checkbox.IsChecked = this.Basketball2Checkbox.IsChecked = this.Volleyball2Checkbox.IsChecked = this.Yoga2Checkbox.IsChecked = this.Fitness2Checkbox.IsChecked = false;
 
             this.Your_ChoiceText.Text = null;
         }

@@ -33,32 +33,21 @@ Title="Products" Height="466" Width="360.5">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
                 <StackPanel Grid.Column="0" Margin="0 0 10 0">
-                    <CheckBox Checked="Checkbox_Checked" x:Name ="TennisCheckbox" Content="Tennis"/>
-                    <CheckBox Checked="Checkbox_Checked" x:Name ="BasketballCheckbox" Content="Basketball"/>
-                    <CheckBox Checked="Checkbox_Checked" x:Name ="VolleyballCheckbox" Content="Volleyball"/>
-                    <CheckBox Checked="Checkbox_Checked" x:Name ="YogaCheckbox" Content="Yoga"/>
-                    <CheckBox Checked="Checkbox_Checked" x:Name ="FitnessCheckbox" Content="Fittness"/>
-
+                    <CheckBox Checked="Checkbox_Checked" x:Name ="TennisCheckbox" Content="Tennis_1h, 10,5 Eur"/>
+                    <CheckBox Checked="Checkbox_Checked" x:Name ="BasketballCheckbox" Content="Basketball_1h, 12,4 Eur"/>
+                    <CheckBox Checked="Checkbox_Checked" x:Name ="VolleyballCheckbox" Content="Volleyball_1h, 15,5 Eur"/>
+                    <CheckBox Checked="Checkbox_Checked" x:Name ="YogaCheckbox" Content="Yoga_1h, 8,7Eur"/>
+                    <CheckBox Checked="Checkbox_Checked" x:Name ="FitnessCheckbox" Content="Fitness_1h, 24,5 Eur"/>
                 </StackPanel>
-                <StackPanel Grid.Column="1">
-                    <CheckBox Checked="Checkbox_Checked" x:Name ="Cost1Checkbox" Content="10,5 Eur/h"/>
-                    <CheckBox Checked="Checkbox_Checked" x:Name ="Cost2Checkbox" Content="12,4 Eur/h"/>
-                    <CheckBox Checked="Checkbox_Checked" x:Name ="Cost3Checkbox" Content="15,5 Eur/h"/>
-                    <CheckBox Checked="Checkbox_Checked" x:Name ="Cost4Checkbox" Content="8,7 Eur/h"/>
-                    <CheckBox Checked="Checkbox_Checked" x:Name ="Cost5Checkbox" Content="24,5 Eur/h"/>
-                </StackPanel>
-
-
                 <StackPanel Grid.Column="2">
-                    <CheckBox Checked="Checkbox_Checked" x:Name ="Cost12Checkbox" Content="20 Eur/2h"/>
-                    <CheckBox Checked="Checkbox_Checked" x:Name ="Cost22Checkbox" Content="24 Eur/2h"/>
-                    <CheckBox Checked="Checkbox_Checked" x:Name ="Cost32Checkbox" Content="30 Eur/2h"/>
-                    <CheckBox Checked="Checkbox_Checked" x:Name ="Cost42Checkbox" Content="19 Eur/2h"/>
-                    <CheckBox Checked="Checkbox_Checked" x:Name ="Cost52Checkbox" Content="48 Eur/2h"/>
+                        <CheckBox Checked="Checkbox_Checked" x:Name ="Tennis2Checkbox" Content="Tennis_2h, 20 Eur"/>
+                        <CheckBox Checked="Checkbox_Checked" x:Name ="Basketball2Checkbox" Content="Basketball_2h, 24 Eur"/>
+                        <CheckBox Checked="Checkbox_Checked" x:Name ="Volleyball2Checkbox" Content="Volleyball_2h, 30 Eur"/>
+                        <CheckBox Checked="Checkbox_Checked" x:Name ="Yoga2Checkbox" Content="Yoga_2h, 19 Eur"/>
+                        <CheckBox Checked="Checkbox_Checked" x:Name ="Fitness2Checkbox" Content="Fitness_2h, 48 Eur"/>
                 </StackPanel>
 
             </Grid>

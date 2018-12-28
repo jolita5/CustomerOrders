@@ -50,7 +50,7 @@ namespace CustomerOrders
             {
 
                 sqlCon.Open();
-                String query = "SELECT o.OrderDate, p.ProductName, p.Price_1h, p.Price_2h, l.Surname, l.Aftername FROM Orders o inner join Products p on o.ProductID=p.Id inner join LoginData l on o.CustomerID=l.Id WHERE Username=@UserName AND Password = @Password";
+                String query = "SELECT o.OrderDate, p.ProductName, p.Price, l.Surname, l.Aftername FROM Orders o inner join Products p on o.ProductID=p.Id inner join LoginData l on o.CustomerID=l.Id WHERE Username=@UserName AND Password = @Password";
                 SqlCommand sqlComd = new SqlCommand(query, sqlCon);
                 sqlComd.CommandType = System.Data.CommandType.Text;
                 sqlComd.Parameters.AddWithValue("@UserName", txtUsername.Text);

@@ -35,8 +35,6 @@ namespace CustomerOrders
             SqlCommand sqlComd;
             SqlDataAdapter da;
             DataTable dt;
-            LoginWindow login = new LoginWindow();
-            DataSet ds = new DataSet();
 
             try
             {
