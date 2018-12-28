@@ -62,19 +62,42 @@ namespace CustomerOrders
         {
             EndWindow end = new EndWindow();
 
-            if (Your_ChoiceText.Text != "" && PaymentText.Text != "" && Calendar.SelectedDate != null)
+            SqlConnection sqlCon = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB; Initial Catalog=LoginUserDB; Integrated Security=True;");
+
+
+            try
             {
-                end.Show();
-                this.Close();
+                if (Your_ChoiceText.Text != "" && PaymentText.Text != "" && Calendar.SelectedDate != null)
+                {
+                    sqlCon.Open();
+                    string query = "INSERT INTO Orders (OrderDate) VALUES('" + this.Calendar.SelectedDate + "')";
+                    SqlCommand createCommand = new SqlCommand(query, sqlCon);
+                    createCommand.ExecuteNonQuery();
+                    MessageBox.Show("Saved");
+                    end.Show();
+                    this.Close();
+                    sqlCon.Close();
+                }
+                else
+                {
+                    MessageBox.Show("The order is not full! Please, check your order.");
+                }
+
+
+
             }
-            else
+
+            catch (Exception ex)
             {
-                MessageBox.Show("The order is not full! Please, check your order.");
+
+                MessageBox.Show(ex.Message);
             }
+
+
 
 
         }
 
-       
+
     }
 }
