@@ -10,7 +10,7 @@
         <ImageBrush ImageSource="Image/Sports.jpg"/>
     </Window.Background>
     <Grid>
-        <DataGrid Name="UsersHistory" AutoGenerateColumns="True" HorizontalAlignment="Center" Margin="190,78,176,71" Width="426"/>
+        <DataGrid Name="UsersHistory" AutoGenerateColumns="True" HorizontalAlignment="Center" Margin="81,43,80,70" Width="631"/>
 
     </Grid>
 </Window>

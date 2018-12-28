@@ -43,12 +43,14 @@ namespace CustomerOrders
 
         private void Checkbox_Checked(object sender, RoutedEventArgs e)
         {
+
             this.Your_ChoiceText.Text += " " + (string)((CheckBox)sender).Content;
+
         }
 
         private void ResetButton_Click(object sender, RoutedEventArgs e)
         {
-            this.TennisCheckbox.IsChecked = this.BasketballCheckbox.IsChecked = this.VolleyballCheckbox.IsChecked = this.YogaCheckbox.IsChecked
+            this.TennisCheckbox.IsChecked = this.BasketballCheckbox.IsChecked = this.VolleyballCheckbox.IsChecked = this.YogaCheckbox.IsChecked = this.FitnessCheckbox.IsChecked
                 = this.Cost1Checkbox.IsChecked = this.Cost2Checkbox.IsChecked = this.Cost3Checkbox.IsChecked = this.Cost4Checkbox.IsChecked = this.Cost5Checkbox.IsChecked
                 = this.Cost12Checkbox.IsChecked = this.Cost22Checkbox.IsChecked = this.Cost32Checkbox.IsChecked = this.Cost42Checkbox.IsChecked = this.Cost52Checkbox.IsChecked = false;
 
@@ -61,7 +63,7 @@ namespace CustomerOrders
         {
             EndWindow end = new EndWindow();
 
-            if (Your_ChoiceText.Text != "" && PaymentText.Text !="" && Calendar.SelectedDate != null)
+            if (Your_ChoiceText.Text != "" && PaymentText.Text != "" && Calendar.SelectedDate != null)
             {
                 end.Show();
                 this.Close();

@@ -25,6 +25,11 @@ namespace CustomerOrders
         {
             InitializeComponent();
 
+        }
+
+        private void btnSubmit_Click(object sender, RoutedEventArgs e)
+        {
+
             SqlConnection sqlCon = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB; Initial Catalog=LoginUserDB; Integrated Security=True;");
             SqlCommand sqlComd;
             SqlDataAdapter da;
@@ -34,14 +39,15 @@ namespace CustomerOrders
 
             try
             {
-                
-                    sqlCon.Open();
-                    sqlComd = new SqlCommand("SELECT * FROM LoginData WHERE Username='"+ login.txtUsername.Text + "' AND Password= '" + login.txtPassword.Password + "'", sqlCon);
-                    da = new SqlDataAdapter(sqlComd);
-                    dt = new DataTable("Account");
-                    da.Fill(dt);
-                    UsersInfo.ItemsSource = dt.DefaultView;
-                    sqlCon.Close();
+
+
+                sqlCon.Open();
+                sqlComd = new SqlCommand("SELECT * FROM LoginData WHERE Username='" + txtUsername.Text + "'", sqlCon);
+                da = new SqlDataAdapter(sqlComd);
+                dt = new DataTable("Account");
+                da.Fill(dt);
+                UsersInfo.ItemsSource = dt.DefaultView;
+                sqlCon.Close();
 
 
             }

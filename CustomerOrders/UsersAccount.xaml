@@ -9,8 +9,10 @@
     <Window.Background>
         <ImageBrush ImageSource="Image/Sports.jpg"/>
     </Window.Background>
-    <Grid>
-        <DataGrid Name="UsersInfo" AutoGenerateColumns="True" HorizontalAlignment="Center" Margin="190,78,176,71" Width="426"/>
-
+    <Grid Margin="0,0,677,361" RenderTransformOrigin="4.098,1.931">
+        <DataGrid Name="UsersInfo" AutoGenerateColumns="True" HorizontalAlignment="Center" Margin="-270,64,-172,-6" Width="557"/>
+        <Label Content="Username" Foreground="White"/>
+        <TextBox Name="txtUsername" Background="#545d6a" Foreground="White" FontSize="18" Margin="7,32,-39,-4"/>
+        <Button x:Name="btnSubmit" Click="btnSubmit_Click"  Content="Submit"  HorizontalAlignment="Left" Height="44" Margin="13,86,0,-72" VerticalAlignment="Top" Width="71"/>
     </Grid>
 </Window>
