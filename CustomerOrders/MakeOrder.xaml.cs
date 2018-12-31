@@ -70,6 +70,8 @@ namespace CustomerOrders
                 if (Your_ChoiceText.Text != "" && PaymentText.Text != "" && Calendar.SelectedDate != null)
                 {
                     sqlCon.Open();
+               //     int choice = ConvertToInt(this.Your_ChoiceText.Text); 
+
                     string query = "INSERT INTO Orders (OrderDate) VALUES('" + this.Calendar.SelectedDate + "')";
                     SqlCommand createCommand = new SqlCommand(query, sqlCon);
                     createCommand.ExecuteNonQuery();
@@ -94,10 +96,21 @@ namespace CustomerOrders
             }
 
 
-
-
         }
 
+        public int ConvertToInt(string choice)
+        {
+            if (choice == "Tennis_1h, 10,5 Eur")
+            {
+                return 1;
+            }
+            else if(choice == "Basketball_1h, 12,4 Eur")
+            {
+                return 2;
+            }
+
+            return 0;
+        }
 
     }
 }
