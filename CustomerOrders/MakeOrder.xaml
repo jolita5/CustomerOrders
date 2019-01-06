@@ -6,13 +6,13 @@
         xmlns:local="clr-namespace:CustomerOrders"
         mc:Ignorable="d"
        
-Title="Products" Height="466" Width="360.5">
+Title="Products" Height="521.666" Width="357.941">
     <Window.Background>
         <ImageBrush ImageSource="Image/images.jpg"/>
     </Window.Background>
     <Border Padding="10" Margin="0,0,0,-23">
 
-        <StackPanel Margin="0,-10,0,10">
+            <StackPanel Margin="0,-10,0,10">
 
             <Grid>
 
@@ -43,14 +43,17 @@ Title="Products" Height="466" Width="360.5">
                     <CheckBox Checked="Checkbox_Checked" x:Name ="FitnessCheckbox" Content="Fitness_1h, 24,5 Eur"/>
                 </StackPanel>
                 <StackPanel Grid.Column="2">
-                        <CheckBox Checked="Checkbox_Checked" x:Name ="Tennis2Checkbox" Content="Tennis_2h, 20 Eur"/>
-                        <CheckBox Checked="Checkbox_Checked" x:Name ="Basketball2Checkbox" Content="Basketball_2h, 24 Eur"/>
-                        <CheckBox Checked="Checkbox_Checked" x:Name ="Volleyball2Checkbox" Content="Volleyball_2h, 30 Eur"/>
-                        <CheckBox Checked="Checkbox_Checked" x:Name ="Yoga2Checkbox" Content="Yoga_2h, 19 Eur"/>
-                        <CheckBox Checked="Checkbox_Checked" x:Name ="Fitness2Checkbox" Content="Fitness_2h, 48 Eur"/>
+                    <CheckBox Checked="Checkbox_Checked" x:Name ="Tennis2Checkbox" Content="Tennis_2h, 20 Eur"/>
+                    <CheckBox Checked="Checkbox_Checked" x:Name ="Basketball2Checkbox" Content="Basketball_2h, 24 Eur"/>
+                    <CheckBox Checked="Checkbox_Checked" x:Name ="Volleyball2Checkbox" Content="Volleyball_2h, 30 Eur"/>
+                    <CheckBox Checked="Checkbox_Checked" x:Name ="Yoga2Checkbox" Content="Yoga_2h, 19 Eur"/>
+                    <CheckBox Checked="Checkbox_Checked" x:Name ="Fitness2Checkbox" Content="Fitness_2h, 48 Eur"/>
                 </StackPanel>
 
             </Grid>
+
+            <TextBlock Text="UserID" />
+            <TextBox x:Name="UserIDText" Padding="2" />
 
             <TextBlock Text="Your_Choice" />
             <TextBox x:Name="Your_ChoiceText" Padding="2" />
@@ -64,6 +67,8 @@ Title="Products" Height="466" Width="360.5">
                 <ComboBoxItem Content="By_Card/in_Cash, after_service"/>
                 <ComboBoxItem Content="By_e-banking, now"/>
             </ComboBox>
+
+
 
             <TextBlock Text ="Note"/>
             <TextBox x:Name ="NoteText" Padding ="2"/>
