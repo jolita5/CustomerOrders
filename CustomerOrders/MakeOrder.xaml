@@ -52,7 +52,7 @@ Title="Products" Height="521.666" Width="357.941">
 
             </Grid>
 
-            <TextBlock Text="UserID" />
+            <TextBlock Text="User_ID" />
             <TextBox x:Name="UserIDText" Padding="2" />
 
             <TextBlock Text="Your_Choice" />

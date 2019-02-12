@@ -21,14 +21,12 @@ namespace CustomerOrders
     /// </summary>
     public partial class MakeOrder : Window
     {
-
-       string _order;
+        private int _productId;
+        private int _customerId;
 
         public MakeOrder()
         {
             InitializeComponent();
-
-          
 
         }
 
@@ -36,8 +34,6 @@ namespace CustomerOrders
         private void ApplyButton_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show($"Your order is: {this.Your_ChoiceText.Text}, time: {this.Calendar.SelectedDate}, payment: {this.PaymentText.Text}, note: {this.NoteText.Text}");
-
-
         }
 
 
@@ -47,8 +43,6 @@ namespace CustomerOrders
 
             this.Your_ChoiceText.Text += " " + (string)((CheckBox)sender).Content;
 
-            
-
         }
 
         private void ResetButton_Click(object sender, RoutedEventArgs e)
@@ -57,6 +51,7 @@ namespace CustomerOrders
                 = this.Tennis2Checkbox.IsChecked = this.Basketball2Checkbox.IsChecked = this.Volleyball2Checkbox.IsChecked = this.Yoga2Checkbox.IsChecked = this.Fitness2Checkbox.IsChecked = false;
 
             this.Your_ChoiceText.Text = null;
+
         }
 
 
@@ -66,8 +61,8 @@ namespace CustomerOrders
             EndWindow end = new EndWindow();
 
             SqlConnection sqlCon = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB; Initial Catalog=LoginUserDB; Integrated Security=True;");
-           
-           
+
+
 
 
             try
@@ -76,12 +71,12 @@ namespace CustomerOrders
                 {
                     sqlCon.Open();
 
-                    
-                  // _order = ConcertToProductID(this.Your_ChoiceText.Text);
 
-                    
 
-                    string query = "INSERT INTO Orders (OrderDate) VALUES('" + this.Calendar.SelectedDate + "')";
+                    _productId = ConcertToProductID(this.Your_ChoiceText.Text);
+                    _customerId = Int32.Parse(this.UserIDText.Text);
+
+                    string query = "INSERT INTO Orders (CustomerID, OrderDate, ProductID) VALUES('" + _customerId + "', '" + this.Calendar.SelectedDate + "', '" + _productId + "')";
                     SqlCommand createCommand = new SqlCommand(query, sqlCon);
                     createCommand.ExecuteNonQuery();
                     MessageBox.Show("Saved");
@@ -107,35 +102,53 @@ namespace CustomerOrders
 
         }
 
-        private string ConcertToProductID(string product)
+        private int ConcertToProductID(string product)
         {
 
 
-            switch (product)
+            if (TennisCheckbox.IsChecked == true)
             {
-                case "Tennis_1h, 10,5 Eur": return "1";
-
-                case "Basketball_1h, 12,4 Eur": return "2";
-
-                case "Volleyball_1h, 15,5 Eur": return "3";
-
-                case "Yoga_1h, 8,7Eur": return "4";
-
-                case "Fitness_1h, 24,5 Eur": return "5";
-
-                case "Tennis_2h, 20 Eur": return "2005";
-
-                case "Basketball_2h, 24 Eur": return "2006";
-
-                case "Volleyball_2h, 30 Eur": return "2007";
-
-                case "Yoga_2h, 16 Eur": return "2008";
-
-                case "Fitness_2h, 28 Eur": return "2009";
-
+                return 1;
+            }
+            else if (Tennis2Checkbox.IsChecked == true)
+            {
+                return 2005;
+            }
+            else if (BasketballCheckbox.IsChecked == true)
+            {
+                return 2;
+            }
+            else if (Basketball2Checkbox.IsChecked == true)
+            {
+                return 2006;
+            }
+            else if (VolleyballCheckbox.IsChecked == true)
+            {
+                return 3;
+            }
+            else if (Volleyball2Checkbox.IsChecked == true)
+            {
+                return 2007;
+            }
+            else if (YogaCheckbox.IsChecked == true)
+            {
+                return 4;
+            }
+            else if (Yoga2Checkbox.IsChecked == true)
+            {
+                return 2008;
+            }
+            else if (FitnessCheckbox.IsChecked == true)
+            {
+                return 5;
+            }
+            else if (Fitness2Checkbox.IsChecked == true)
+            {
+                return 2009;
             }
 
-            return null;
+
+            return 0;
         }
 
     }
